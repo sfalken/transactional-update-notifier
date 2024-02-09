@@ -42,6 +42,7 @@ func notify(input string) {
 	hints := map[string]dbus.Variant{
 		"urgency":  dbus.MakeVariant(byte(1)),
 		"category": dbus.MakeVariant("device"),
+    "resident": dbus.MakeVariant("true"),
 	}
 
 	call := obj.Call(
